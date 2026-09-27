@@ -19,6 +19,6 @@ class Settings(BaseSettings):
     database_url: SecretStr
 
 
-@lru_cache()
+@lru_cache
 def get_settings() -> Settings:
     return Settings()
